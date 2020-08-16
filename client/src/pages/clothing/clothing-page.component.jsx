@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 // import FileLoader from "../../components/file-loader/fileLoader.js";
@@ -8,15 +8,20 @@ import "./clothing-page.styles.scss";
 gsap.registerPlugin(Draggable);
 
 const ClothingPage = () => {
+  var image = useRef(null);
+
   useEffect(() => {
-    Draggable.create(".picture");
+    Draggable.create(image);
   });
   return (
     <div>
       <h1>ClothingPage</h1>
 
-      <img className="picture" src={require("./png-pictures/cloth1.png")}></img>
-      <img className="picture" src={require("./png-pictures/cloth2.png")}></img>
+      <img
+        ref={(el) => (image = el)}
+        className="picture"
+        src={require("./png-pictures/cloth1.png")}
+      ></img>
     </div>
   );
 };
