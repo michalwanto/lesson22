@@ -20,7 +20,7 @@ const ClothingPage = () => {
       <img
         ref={(el) => (image = el)}
         className="picture"
-        src={require("./png-pictures/cloth1.png")}
+        src={require("../../assets/png-pictures/cloth1.png")}
       ></img>
     </div>
   );
