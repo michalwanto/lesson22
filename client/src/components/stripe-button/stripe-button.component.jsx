@@ -5,10 +5,10 @@ import axios from "axios";
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey =
-    "pk_test_51H1v3eDwIwtpSHLmeJHly8vs5meReOCmG0mAA9ZR96NQ4Qx4DNf833b0yg6VnuV3DtfObp2hssXTasQvRpWiPskl00gzAH8YHv";
+    "pk_test_51Fj8tREh1LbLp58TzJsVxn42WbhQkn5aZYYt0rtUJnMNoO0rYkMOE8Pq7wsFi4gswhmL7ljGLQvgjbzyVfLKuQmg00tNBg7hbg";
 
   const onToken = (token) => {
-    debugger;
+    console.log("payment is succcesful");
     axios({
       url: "payment",
       method: "post",

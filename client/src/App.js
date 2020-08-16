@@ -34,6 +34,7 @@ const App = ({ checkCurrentUser, currentUser }) => {
             currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
           }
         />
+        <Route path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
