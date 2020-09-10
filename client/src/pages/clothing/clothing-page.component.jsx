@@ -4,7 +4,7 @@ import { Draggable } from "gsap/Draggable";
 import FileLoader from "../../components/file-loader/fileLoader.js";
 import $ from "jquery";
 
-import "./clothing-page.styles.scss";
+import "./clothing-page.styles.css";
 
 gsap.registerPlugin(Draggable);
 
