@@ -8,8 +8,8 @@ import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-import CheckoutPage from "./pages/checkout/checkout.component";
-
+import CheckoutPage from "./pages/checkout/checkout.component.copy";
+import ClothingPage from "./pages/clothing/clothing-page.component";
 import Header from "./components/header/header.component";
 
 import { checkCurrentUser } from "./redux/user/user.actions";
@@ -34,6 +34,7 @@ const App = ({ checkCurrentUser, currentUser }) => {
             currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
           }
         />
+        <Route exact path="/clothing" component={ClothingPage} />
       </Switch>
     </div>
   );
